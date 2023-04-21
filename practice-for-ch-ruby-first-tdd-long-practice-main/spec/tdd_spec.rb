@@ -23,3 +23,18 @@ describe Array do
         end
     end
 end
+
+describe "#my_transpose" do 
+    subject(:array) {my_transpose([ [0, 1, 2], [3, 4, 5], [6, 7, 8]])}
+
+    it "returns a 2d array" do
+        expect(array[0].class).to eq(Array)
+    end
+
+    it "swaps rows and columns" do 
+        expect(array).to eq([[0, 3, 6], [1, 4, 7], [2, 5, 8]])
+        
+    end
+
+
+end

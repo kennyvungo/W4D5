@@ -23,3 +23,15 @@ class Array
         new_arr
     end
 end
+
+def my_transpose(matrix)
+    transposed = [] 
+    (0...matrix[0].length).each do |idx|
+        temp_arr = [] 
+        (0...matrix.length).each do |jdx|
+            temp_arr << matrix[jdx][idx]
+        end
+        transposed << temp_arr
+    end
+    transposed
+end
