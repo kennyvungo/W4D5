@@ -36,5 +36,18 @@ describe "#my_transpose" do
         
     end
 
-
 end
+
+describe "#stock_picker" do
+    subject(:days){stock_picker([10,30,20,60,40])}
+
+    it "return an array" do 
+        expect(days.class).to eq(Array)
+    end
+
+    it "returns the most profitable buy/sell days" do
+        expect(days).to eq([0,3])
+    end
+end
+
+

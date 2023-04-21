@@ -35,3 +35,20 @@ def my_transpose(matrix)
     end
     transposed
 end
+
+def stock_picker(array)
+    largest_sum = 0
+    largest_indices = []
+    (0...array.length).each do |i|
+        j = i + 1
+        while j < array.length
+           if array[j] - array[i] > largest_sum
+            largest_sum = array[i] + array[j]
+            largest_indices[0] = i
+            largest_indices[1] = j
+           end
+           j += 1
+        end
+    end
+    largest_indices
+end
