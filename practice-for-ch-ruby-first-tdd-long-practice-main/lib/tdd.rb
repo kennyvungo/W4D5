@@ -52,3 +52,12 @@ def stock_picker(array)
     end
     largest_indices
 end
+
+class Hanoi
+    attr_accessor :board
+
+    def initialize
+        @board = Array.new(3) {Array.new}
+        @board[0] = [4,3,2,1]
+    end
+end

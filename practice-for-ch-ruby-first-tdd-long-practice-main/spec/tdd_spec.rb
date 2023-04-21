@@ -50,4 +50,22 @@ describe "#stock_picker" do
     end
 end
 
+describe Hanoi do 
+    subject(:game) { Hanoi.new }
+    describe "#initialize" do 
+        it "board has 3 arrays" do 
+            expect(game.board.length).to eq(3)
+            expect(game.board[0].class).to eq(Array)
+        end
+        it "all disks are in first array" do 
+            expect(game.board[0].length).to eq(4)
+            expect(game.board[1].length).to eq(0)
+            expect(game.board[2].length).to eq(0)
+        end
+
+    end 
+
+
+end
+
 
