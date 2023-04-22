@@ -52,6 +52,7 @@ end
 
 describe Hanoi do 
     subject(:game) { Hanoi.new }
+
     describe "#initialize" do 
         it "board has 3 arrays" do 
             expect(game.board.length).to eq(3)
@@ -62,9 +63,29 @@ describe Hanoi do
             expect(game.board[1].length).to eq(0)
             expect(game.board[2].length).to eq(0)
         end
-
     end 
 
+    describe "#move" do
+        context "valid moves" do
+            it "moves a disk " do
+                expect(game.move(0,1)).to eq([1])
+            end
+        end
+        context "invalid move" do
+            it "raise error when provided with wrong move" do
+                expect{game.move(0,2)}.to raise_error("invalid move")
+            end
+        end
+
+    end
+
+
+    # describe "#won?" do
+    #     before(:each){}
+    #     it "returns false if game is not won yet" do
+    #         expect(game.won?).to eq(false)
+    #     end
+    # end
 
 end
 

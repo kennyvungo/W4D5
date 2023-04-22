@@ -61,3 +61,6 @@ class Hanoi
         @board[0] = [4,3,2,1]
     end
 end
+
+
+#move, we want to pop off 
